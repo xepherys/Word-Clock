@@ -25,7 +25,7 @@ void setup() {
   grid.begin();
   grid.show();
   //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-  //rtc.adjust(DateTime(2017, 7, 30, 7, 35, 0)); //manual adjustment
+  //rtc.adjust(DateTime(2019, 11, 28, 22, 48, 0)); //manual adjustment
 
   // reads the stored color values from EEPROM.
   top_color = EEPROM.read(0);
@@ -41,7 +41,8 @@ void loop() {
   wipe();
   switch(state){
     case 0: // Regular clock display
-      display_time(colors(top_color), colors(bottom_color));
+      //display_time(colors(top_color), colors(bottom_color));
+      display_time(grid.Color(0, 222, 222), grid.Color(255, 0, 164));
       display_bday();
       check_buttons(&state);
       break;

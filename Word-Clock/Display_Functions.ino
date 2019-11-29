@@ -10,36 +10,29 @@ void wipe(){
 
 //Checks to see if birthdays are active, and sets rainbow text if so.
 void display_bday(){
-  //Nov 29
-  if(rtc.now().month() == 11 && rtc.now().day() == 29){
+  //Dec 25 - Peep's Bday
+  if(rtc.now().month() == 12 && rtc.now().day() == 25){
     happy(rainbow());
     bday(rainbow());
-    papa(rainbow());
-  }
-  //July 30
-  if(rtc.now().month() == 7 && rtc.now().day() == 30){
-    happy(rainbow());
-    bday(rainbow());
-    granny(rainbow());
   }
 }
 
 //Storage for the various colors used in the display
 uint32_t colors(byte i){
   static uint32_t c_arr[13]{
-    grid.Color(255, 255, 255), // white (default)
-    grid.Color(255, 0, 0), // red
-    grid.Color(255, 128, 0), // orange
-    grid.Color(255, 255, 0), // yellow
-    grid.Color(128, 255, 0), // lime
-    grid.Color(0, 255, 0), // green
+    //grid.Color(255, 255, 255), // white (default)
+    //grid.Color(255, 0, 0), // red
+    //grid.Color(255, 128, 0), // orange
+    //grid.Color(255, 255, 0), // yellow
+    //grid.Color(128, 255, 0), // lime
+    //grid.Color(0, 255, 0), // green
     grid.Color(0, 255, 128), // mint
-    grid.Color(0, 255, 255), // turquoise
-    grid.Color(0, 128, 255), // light blue
-    grid.Color(0, 0, 255), // blue
-    grid.Color(128, 0, 255), // purple
-    grid.Color(255, 0, 255), // pink
-    grid.Color(255, 0, 128), // hot pink
+    //grid.Color(0, 255, 255), // turquoise
+    //grid.Color(0, 128, 255), // light blue
+    //grid.Color(0, 0, 255), // blue
+    //grid.Color(128, 0, 255), // purple
+    //grid.Color(255, 0, 255), // pink
+    //grid.Color(255, 0, 128), // hot pink
   };
   if(i < 13){
     return c_arr[i];
@@ -314,4 +307,3 @@ void display_num(uint32_t c, byte num, byte origin){
       break;
   }
 }
-

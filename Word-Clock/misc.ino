@@ -55,12 +55,6 @@ void test_words(uint32_t c, int t){
   past(c);
   wipe(t);
   
-  papa(c);
-  wipe(t);
-
-  granny(c);
-  wipe(t);
-  
   one(c);
   wipe(t);
   
@@ -265,4 +259,3 @@ void test_numbers(uint32_t c, byte num, int d){
     delay(d);
   }
 }
-
