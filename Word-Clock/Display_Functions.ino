@@ -129,89 +129,89 @@ void display_time(uint32_t c, uint32_t hc){
   it(c);
   is(c);
 
-  int min = get_min();
-  int hour = get_hour();
+  int t_min = get_min();
+  int t_hour = get_hour();
   
-  if (min < 5)
+  if (t_min < 5)
   {
-    display_hour(hour, hc);
+    display_hour(t_hour, hc);
   }
 
-  else if (min < 10)
+  else if (t_min < 10)
   {
     five_t(c);
     past(c);
-    display_hour(hour, hc);
+    display_hour(t_hour, hc);
   }
 
-  else if (min < 15)
+  else if (t_min < 15)
   {
     ten_t(c);
     past(c);
-    display_hour(hour, hc);
+    display_hour(t_hour, hc);
   }
 
-  else if (min < 20)
+  else if (t_min < 20)
   {
     a(c);
     quarter(c);
     past(c);
-    display_hour(hour, hc);
+    display_hour(t_hour, hc);
   }
 
-  else if (min < 25)
+  else if (t_min < 25)
   {
     twenty(c);
     past(c);
-    display_hour(hour, hc);
+    display_hour(t_hour, hc);
   }
 
-  else if (min < 30)
+  else if (t_min < 30)
   {
     twenty(c);
     five_t(c);
     past(c);
-    display_hour(hour, hc);
+    display_hour(t_hour, hc);
   }
 
-  else if (min < 35){
+  else if (t_min < 35){
     half(c);
     past(c);
-    display_hour(hour, hc);
+    display_hour(t_hour, hc);
   }
 
-  else if (min < 40){
+  else if (t_min < 40){
     twenty(c);
     five_t(c);
     to(c);
-    display_hour(hour + 1, hc);
+    display_hour(t_hour + 1, hc);
   }
 
-  else if (min < 45)
+  else if (t_min < 45)
   {
     twenty(c);
     to(c);
-    display_hour(hour + 1, hc);
+    display_hour(t_hour + 1, hc);
   }
 
-  else if (min < 50){
+  else if (t_min < 50){
     a(c);
     quarter(c);
     to(c);
-    display_hour(hour + 1, hc);
+    display_hour(t_hour + 1, hc);
   }
 
-  else if (min < 55){
+  else if (t_min < 55){
     ten_t(c);
     to(c);
-    display_hour(hour + 1, hc);
+    display_hour(t_hour + 1, hc);
   }
 
   else
   {
     five_t(c);
     to(c);
-    display_hour(hour + 1, hc);
+    display_hour(t_hour + 1, hc);
   }
   
 }
