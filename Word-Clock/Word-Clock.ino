@@ -20,6 +20,12 @@ Adafruit_NeoPixel grid = Adafruit_NeoPixel(LENGTH, PIN, NEO_GRB + NEO_KHZ800);
 byte top_color;
 byte bottom_color;
 bool colors_saved = false;
+
+//Time adjustments
+int DST = 0;
+bool useDST = true;
+
+//Debug
 int cycle_count = 0;
 
 void setup() {
@@ -32,7 +38,7 @@ void setup() {
   // Uncomment the appropriate line, upload and run the sketch, then comment the line back out
   // and upload the sketch again.
   //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-  //rtc.adjust(DateTime(2020, 03, 31, 15, 17, 0)); //manual adjustment
+  rtc.adjust(DateTime(2020, 03, 31, 15, 43, 0)); //manual adjustment
 
   // reads the stored color values from EEPROM.
   top_color = EEPROM.read(0);
@@ -40,6 +46,8 @@ void setup() {
 
   pinMode(8, INPUT);
   pinMode(9, INPUT);
+
+  dstCheck();
 }
 
 void loop() {
@@ -65,7 +73,7 @@ void loop() {
     }
   }
 
-  //wipe();
+  wipe();
   //switch(state){
   //  case 0: // Regular clock display
       //display_time(colors(top_color), colors(bottom_color));

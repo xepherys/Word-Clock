@@ -2,6 +2,7 @@
 //FOR FUN / TESTING
 
 //For fun.
+/*
 void snake(uint32_t c, int t){
   wipe();
   for(int i = 0; i < LENGTH; i++){
@@ -9,15 +10,19 @@ void snake(uint32_t c, int t){
     wipe(t);
   }
 }
+*/
 
 //Overloaded. Shows current display for 't' ms, and wipes again.
+/*
 void wipe(int t){
   grid.show();
   delay(t);
   wipe();
 }
+*/
 
 //Tests each word, using a color "c" and a time delay of "t" ms between each.
+/*
 void test_words(uint32_t c, int t){
   it(c);
   wipe(t);
@@ -92,8 +97,10 @@ void test_words(uint32_t c, int t){
   wipe(t);
   
 }
+*/
 
 // Tests the numerical numbers
+/*
 void animate_numbers(uint32_t c, byte num, int d){
   if(num >= 1){
     for(byte col = 0; col <= 50; col+=10){
@@ -196,7 +203,9 @@ void animate_numbers(uint32_t c, byte num, int d){
     }
   }
 }
+*/
 
+/*
 void test_numbers(uint32_t c, byte num, int d){
   if(num >= 1){
     wipe();
@@ -259,3 +268,4 @@ void test_numbers(uint32_t c, byte num, int d){
     delay(d);
   }
 }
+*/

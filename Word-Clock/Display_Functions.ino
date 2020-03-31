@@ -2,10 +2,22 @@
 //FUNCTIONS THAT HANDLE THE DISPLAY
 
 //Turns all pixels off
-void wipe(){
-  for(int i = 0; i < LENGTH; i++){
+void wipe()
+{
+  if (DEBUG) Serial.write("\nWiping: ");
+  
+  for(int i = 0; i < LENGTH; i++)
+  {
     grid.setPixelColor(i, grid.Color(0, 0, 0));
+
+    if (DEBUG)
+    {
+      Serial.write(i);
+      Serial.write(" ");
+    }
   }
+  
+  if (DEBUG) Serial.write("\n");
 }
 
 //Checks to see if birthdays are active, and sets rainbow text if so.
@@ -131,6 +143,12 @@ void display_time(uint32_t c, uint32_t hc){
 
   int t_min = get_min();
   int t_hour = get_hour();
+
+  if (t_hour == 2)
+  {
+    dstCheck();
+    t_hour = get_hour();
+  }
   
   if (t_min < 5)
   {

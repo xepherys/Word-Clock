@@ -2,6 +2,7 @@
 //FUNCTIONS THAT HANDLE THE INPUTS
 
 //Checks the button states.
+/*
 void check_buttons(byte *state){
   static unsigned long last_time = 0;
   static byte last_state[2] = {0, 0};
@@ -58,7 +59,7 @@ void check_buttons(byte *state){
   last_state[1] = down_btn;
   
 }
-
+*/
 /*
  * In the functions below, the real-time button results will
  * be handled. The built in purpose of the functions themselves
@@ -67,6 +68,7 @@ void check_buttons(byte *state){
  */
 
 // If the up button is held
+/*
 byte up_held(byte state){
   switch(state){
     case 0: // Regular clock functionality
@@ -192,3 +194,4 @@ byte down_tapped(byte state){
   }
   return state;
 }
+*/
