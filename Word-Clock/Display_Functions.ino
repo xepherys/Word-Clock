@@ -128,79 +128,90 @@ uint32_t rainbow(){
 void display_time(uint32_t c, uint32_t hc){
   it(c);
   is(c);
+
+  int min = get_min();
+  int hour = get_hour();
   
-  if(get_min() >= 0 && get_min() < 5){
-    display_hour(get_hour(), hc);
+  if (min < 5)
+  {
+    display_hour(hour, hc);
   }
 
-  if(get_min() >= 5 && get_min() < 10){
+  else if (min < 10)
+  {
     five_t(c);
     past(c);
-    display_hour(get_hour(), hc);
+    display_hour(hour, hc);
   }
 
-  if(get_min() >= 10 && get_min() < 15){
+  else if (min < 15)
+  {
     ten_t(c);
     past(c);
-    display_hour(get_hour(), hc);
+    display_hour(hour, hc);
   }
 
-  if(get_min() >= 15 && get_min() < 20){
+  else if (min < 20)
+  {
     a(c);
     quarter(c);
     past(c);
-    display_hour(get_hour(), hc);
+    display_hour(hour, hc);
   }
 
-  if(get_min() >= 20 && get_min() < 25){
+  else if (min < 25)
+  {
     twenty(c);
     past(c);
-    display_hour(get_hour(), hc);
+    display_hour(hour, hc);
   }
 
-  if(get_min() >= 25 && get_min() < 30){
+  else if (min < 30)
+  {
     twenty(c);
     five_t(c);
     past(c);
-    display_hour(get_hour(), hc);
+    display_hour(hour, hc);
   }
 
-  if(get_min() >= 30 && get_min() < 35){
+  else if (min < 35){
     half(c);
     past(c);
-    display_hour(get_hour(), hc);
+    display_hour(hour, hc);
   }
 
-  if(get_min() >= 35 && get_min() < 40){
+  else if (min < 40){
     twenty(c);
     five_t(c);
     to(c);
-    display_hour(get_hour() + 1, hc);
+    display_hour(hour + 1, hc);
   }
 
-  if(get_min() >= 40 && get_min() < 45){
+  else if (min < 45)
+  {
     twenty(c);
     to(c);
-    display_hour(get_hour() + 1, hc);
+    display_hour(hour + 1, hc);
   }
 
-  if(get_min() >= 45 && get_min() < 50){
+  else if (min < 50){
     a(c);
     quarter(c);
     to(c);
-    display_hour(get_hour() + 1, hc);
+    display_hour(hour + 1, hc);
   }
 
-  if(get_min() >= 50 && get_min() < 55){
+  else if (min < 55){
     ten_t(c);
     to(c);
-    display_hour(get_hour() + 1, hc);
+    display_hour(hour + 1, hc);
   }
 
-  if(get_min() >= 55 && get_min() < 60){
+  else
+  {
     five_t(c);
     to(c);
-    display_hour(get_hour() + 1, hc);
+    display_hour(hour + 1, hc);
   }
   
 }

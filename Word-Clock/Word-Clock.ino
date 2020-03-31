@@ -25,7 +25,7 @@ void setup() {
   grid.begin();
   grid.show();
   //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-  //rtc.adjust(DateTime(2019, 11, 28, 22, 48, 0)); //manual adjustment
+  //rtc.adjust(DateTime(2020, 03, 31, 14, 148, 0)); //manual adjustment
 
   // reads the stored color values from EEPROM.
   top_color = EEPROM.read(0);
