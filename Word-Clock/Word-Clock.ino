@@ -120,7 +120,8 @@ void loop() {
       display_hm(flash_color(grid.Color(255, 255, 255), grid.Color(255, 0, 0), 100), grid.Color(255, 255, 255));
       check_buttons(&state);
       break;
-      */
+      
   }
+  */
   grid.show();
 }
